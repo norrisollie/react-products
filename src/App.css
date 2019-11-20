@@ -1,0 +1,50 @@
+.header {
+  width: 100vw;
+  height: 30vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #aaa;
+  color: #fff;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: min-content;
+  padding: 50px;
+  background-color: #eee;
+  min-height: 80vh;
+  grid-gap: 20px;
+}
+
+.footer {
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-product {
+  font-size: 10px;
+  color: goldenrod;
+  letter-spacing: 1px;
+}
+
+.product-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.product-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-weight: bold;
+}
