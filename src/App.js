@@ -15,10 +15,20 @@ class App extends React.Component {
         }
     }
 
+    
+
     render() {
+
+        const handleLogin = () => {
+            console.log("hel")
+            this.setState({
+                isLoggedIn: true
+            })
+        }
+
         return (
             <div>
-                <Header />
+                <Header isLoggedIn={this.state.isLoggedIn} handleLogin={handleLogin}/>
                 <Main />
                 <Footer />
             </div>

@@ -12,7 +12,7 @@
 .main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: min-content;
+  grid-auto-rows: min-content;
   padding: 50px;
   background-color: #eee;
   min-height: 80vh;
@@ -37,6 +37,9 @@
   display: flex;
   flex-direction: column;
   background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 3px 3px #ddd;
 }
 
 .product-title {
@@ -47,4 +50,37 @@
 
 .product-price {
   font-weight: bold;
+  margin-top: 5px;
+}
+
+.colours-wrapper {
+  display: flex;
+  margin-top: 5px;
+}
+
+.colour {
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  border: 1px solid #fff;
+  box-shadow: 0 0 0 1.5px #ddd;
+  margin-right: 5px;
+}
+
+.colour:last-child {
+  margin: 0;
+}
+
+.colour.space-gray {
+  background-color: gray;
+}
+
+.colour.silver {
+  background-color: silver;
+}
+
+.login-container {
+  position: absolute;
+  top: 3px;
+  right: 3px;
 }

@@ -1,7 +1,7 @@
 const productData = [
     {
         id: 1,
-        name: "Apple Macbook Pro 13in",
+        name: "Apple MacBook Pro 13in",
         price: 1299,
         isNewProduct: false,
         desc: "1.4GHz Quad-Core Processor with Turbo Boost up to 3.9GHz, 128GB Storage, Touch Bar and Touch ID",
@@ -18,7 +18,7 @@ const productData = [
     },
     {
         id: 2,
-        name: "Apple Macbook Pro 13in",
+        name: "Apple MacBook Pro 13in",
         price: 1499,
         isNewProduct: false,
         desc: "1.4GHz Quad-Core Processor with Turbo Boost up to 3.9GHz, 256GB Storage, Touch Bar and Touch ID",
@@ -35,7 +35,7 @@ const productData = [
     },
     {
         id: 3,
-        name: "Apple Macbook Pro 13in",
+        name: "Apple MacBook Pro 13in",
         price: 1799,
         isNewProduct: false,
         desc: "2.4GHz Quad-Core Processor with Turbo Boost up to 4.1GHz, 256GB Storage, Touch Bar and Touch ID",
@@ -52,7 +52,7 @@ const productData = [
     },
     {
         id: 4,
-        name: "Apple Macbook Pro 13in",
+        name: "Apple MacBook Pro 13in",
         price: 1999,
         isNewProduct: false,
         desc: "2.4GHz Quad-Core Processor with Turbo Boost up to 4.1GHz, 512GB Storage, Touch Bar and Touch ID",
