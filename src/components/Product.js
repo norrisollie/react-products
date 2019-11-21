@@ -1,27 +1,39 @@
 import React from "react"
 
-function Product(props) {
+class Product extends React.Component {
 
-    const colours = props.colours.map((productColour) => {
-        const colourForClass = productColour.colour.replace(" ", "-").toLowerCase();
-        return <div className={colourForClass + " colour"} key={productColour.id} data-colour={productColour.colour} onClick={ () => {  handleClick()} }></div>
-    })
-
-    const { name, price, desc, isNewProduct } = props
-
-    function handleClick() {
-        console.log("clicked")
+    constructor() {
+        super()
     }
 
-    return (
-        <div className="product-wrapper">
-            <div className="new-product">{isNewProduct ? "NEW" : ""}</div>
-            <div className="product-title">{name}</div>
-            <div>{desc}</div>
-            <div className="colours-wrapper">{colours}</div>
-            <div className="product-price">{price.toLocaleString("gb", { style: "currency", currency: "GBP" })}</div>
-        </div>
-    )
+    render() {
+        const colours = this.props.colours.map((productColour) => {
+            const colourForClass = productColour.colour.replace(" ", "-").toLowerCase();
+            return <div className={productColour.default ? colourForClass + " colour active" : colourForClass + " colour"} key={productColour.id} data-colour={productColour.colour} onClick={(e) => handleColourClick(e)}></div>
+        })
+
+        const images = this.props.colours.map((productImages) => {
+            const imageSrc = productImages.images
+            return <img className={productImages.default ? "product-image active" : "product-image"} key={productImages.id} src={imageSrc} />
+        })
+
+        const { name, price, desc, isNewProduct } = this.props
+
+        const handleColourClick = (e) => {
+            console.log(e)
+        }
+
+        return (
+            <div className="product-wrapper">
+                <div className="new-product">{isNewProduct ? "NEW" : ""}</div>
+                <div className="product-title">{name}</div>
+                <div className="product-images">{images}</div>
+                <div>{desc}</div>
+                <div className="colours-wrapper">{colours}</div>
+                <div className="product-price">{price.toLocaleString("gb", { style: "currency", currency: "GBP" })}</div>
+            </div>
+        )
+    }
 
 }
 

@@ -8,11 +8,15 @@ const productData = [
         colours: [
             {
                 id: 1,
-                colour: "Space Gray"
+                colour: "Space Gray",
+                images: "images/mbp13-space-gray.jpg",
+                default: true
             },
             {
                 id: 2,
-                colour: "Silver"
+                colour: "Silver",
+                images: "images/mbp13-silver.jpg",
+                default: false
             }
         ]
     },
@@ -25,11 +29,15 @@ const productData = [
         colours: [
             {
                 id: 1,
-                colour: "Space Gray"
+                colour: "Space Gray",
+                images: "images/mbp13-space-gray.jpg",
+                default: true
             },
             {
                 id: 2,
-                colour: "Silver"
+                colour: "Silver",
+                images: "images/mbp13-silver.jpg",
+                default: false
             }
         ]
     },
@@ -42,11 +50,15 @@ const productData = [
         colours: [
             {
                 id: 1,
-                colour: "Space Gray"
+                colour: "Space Gray",
+                images: "images/mbp13-space-gray.jpg",
+                default: true
             },
             {
                 id: 2,
-                colour: "Silver"
+                colour: "Silver",
+                images: "images/mbp13-silver.jpg",
+                default: false
             }
         ]
     },
@@ -59,11 +71,15 @@ const productData = [
         colours: [
             {
                 id: 1,
-                colour: "Space Gray"
+                colour: "Space Gray",
+                images: "images/mbp13-space-gray.jpg",
+                default: true
             },
             {
                 id: 2,
-                colour: "Silver"
+                colour: "Silver",
+                images: "images/mbp13-silver.jpg",
+                default: false
             }
         ]
     },
@@ -76,11 +92,15 @@ const productData = [
         colours: [
             {
                 id: 1,
-                colour: "Space Gray"
+                colour: "Space Gray",
+                images: "images/mbp16-space-gray.jpg",
+                default: true
             },
             {
                 id: 2,
-                colour: "Silver"
+                colour: "Silver",
+                images: "images/mbp16-silver.jpg",
+                default: false
             }
         ]
     },
@@ -93,11 +113,15 @@ const productData = [
         colours: [
             {
                 id: 1,
-                colour: "Space Gray"
+                colour: "Space Gray",
+                images: "images/mbp16-space-gray.jpg",
+                default: true
             },
             {
                 id: 2,
-                colour: "Silver"
+                colour: "Silver",
+                images: "images/mbp16-silver.jpg",
+                default: false
             }
         ]
     }

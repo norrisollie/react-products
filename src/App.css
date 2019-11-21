@@ -67,6 +67,10 @@
   margin-right: 5px;
 }
 
+.colour.active {
+  box-shadow: 0 0 0 1px rgb(82, 192, 255);
+}
+
 .colour:last-child {
   margin: 0;
 }
@@ -83,4 +87,20 @@
   position: absolute;
   top: 3px;
   right: 3px;
+}
+
+.product-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image {
+  max-width: 226px;
+  display: none;
+  margin-bottom: 10px;
+}
+
+.product-image.active {
+  display: inline;
 }

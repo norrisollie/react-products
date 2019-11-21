@@ -3,21 +3,21 @@ import LoginContainer from "./LoginContainer"
 
 class Header extends React.Component {
 
-constructor() {
-    super()
-}
+    constructor() {
+        super()
+    }
 
-render() {
+    render() {
 
-    console.log(this.props)
+        console.log(this.props)
 
-    return (
-        <div className="header">
-            <h1>Store</h1>
-                <LoginContainer handleLogin={this.props.handleLogin} isLoggedIn={this.props.isLoggedIn}/>
-        </div>
-    )
-}
+        return (
+            <div className="header">
+                <h1>Store</h1>
+                <LoginContainer handleLogin={this.props.handleLogin} isLoggedIn={this.props.isLoggedIn} />
+            </div>
+        )
+    }
 
 }
 
