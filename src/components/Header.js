@@ -9,8 +9,6 @@ class Header extends React.Component {
 
     render() {
 
-        console.log(this.props)
-
         return (
             <div className="header">
                 <h1>Store</h1>

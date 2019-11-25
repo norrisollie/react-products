@@ -7,21 +7,22 @@ class Product extends React.Component {
     }
 
     render() {
+
+        const { id, name, price, desc, isNewProduct, handleColourClick } = this.props
+
         const colours = this.props.colours.map((productColour) => {
             const colourForClass = productColour.colour.replace(" ", "-").toLowerCase();
-            return <div className={productColour.default ? colourForClass + " colour active" : colourForClass + " colour"} key={productColour.id} data-colour={productColour.colour} onClick={(e) => handleColourClick(e)}></div>
+            return <div className={productColour.default ? colourForClass + " colour active" : colourForClass + " colour"} key={productColour.id} data-colour={productColour.colour} data-key={productColour.id} data-product-id={id} onClick={(e) =>handleColourClick(e)}></div>
         })
 
         const images = this.props.colours.map((productImages) => {
             const imageSrc = productImages.images
-            return <img className={productImages.default ? "product-image active" : "product-image"} key={productImages.id} src={imageSrc} />
+            return <img
+            className={productImages.default ? "product-image active" : "product-image"}
+            key={productImages.id}
+            src={imageSrc}
+            alt={name}/>
         })
-
-        const { name, price, desc, isNewProduct } = this.props
-
-        const handleColourClick = (e) => {
-            console.log(e)
-        }
 
         return (
             <div className="product-wrapper">

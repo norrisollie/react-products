@@ -9,7 +9,6 @@ class LoginContainer extends React.Component {
     render() {
         const date = new Date();
         const hours = date.getHours();
-        let greeting
 
         if (hours >= 0 && hours < 12) {
             greeting = "morning"
@@ -19,10 +18,10 @@ class LoginContainer extends React.Component {
             greeting = "evening"
         }
 
-        console.log(this.props)
+        let buttonMessage = this.props.isLoggedIn ? "Log In" : "Log Out"
 
         return (
-            !this.props.isLoggedIn ? <div className="login-container log-in" onClick={() => { this.props.handleLogin() }}>Log in</div> : <div className="login-container log-out">Good {greeting}, Ollie</div>
+            <div onClick={ () => { this.props.handleLogin() } }>{buttonMessage}</div>
         )
     }
 }

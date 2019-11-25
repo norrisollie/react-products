@@ -20,9 +20,10 @@ class App extends React.Component {
     render() {
 
         const handleLogin = () => {
-            console.log("hel")
-            this.setState({
-                isLoggedIn: true
+            this.setState(prevState => {
+                return {
+                    isLoggedIn: !prevState.isLoggedIn
+                }
             })
         }
 
