@@ -4,6 +4,7 @@ const productData = [
         name: "Apple MacBook Pro 13in",
         price: 1299,
         isNewProduct: false,
+        isCompared: false,
         desc: "1.4GHz Quad-Core Processor with Turbo Boost up to 3.9GHz, 128GB Storage, Touch Bar and Touch ID",
         colours: [
             {
@@ -25,6 +26,7 @@ const productData = [
         name: "Apple MacBook Pro 13in",
         price: 1499,
         isNewProduct: false,
+        isCompared: false,
         desc: "1.4GHz Quad-Core Processor with Turbo Boost up to 3.9GHz, 256GB Storage, Touch Bar and Touch ID",
         colours: [
             {
@@ -46,6 +48,7 @@ const productData = [
         name: "Apple MacBook Pro 13in",
         price: 1799,
         isNewProduct: false,
+        isCompared: false,
         desc: "2.4GHz Quad-Core Processor with Turbo Boost up to 4.1GHz, 256GB Storage, Touch Bar and Touch ID",
         colours: [
             {
@@ -67,6 +70,7 @@ const productData = [
         name: "Apple MacBook Pro 13in",
         price: 1999,
         isNewProduct: false,
+        isCompared: false,
         desc: "2.4GHz Quad-Core Processor with Turbo Boost up to 4.1GHz, 512GB Storage, Touch Bar and Touch ID",
         colours: [
             {
@@ -88,6 +92,7 @@ const productData = [
         name: "Apple MacBook Pro 16in",
         price: 2399,
         isNewProduct: true,
+        isCompared: false,
         desc: "2.6GHz 6-Core Processor, 512GB Storage, AMD Radeon Pro 5300M",
         colours: [
             {
@@ -109,6 +114,7 @@ const productData = [
         name: "Apple MacBook Pro 16in",
         price: 2799,
         isNewProduct: true,
+        isCompared: false,
         desc: "2.3GHz 8-Core Processor, 1TB Storage, AMD Radeon Pro 5500M",
         colours: [
             {

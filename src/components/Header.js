@@ -3,10 +3,6 @@ import LoginContainer from "./LoginContainer"
 
 class Header extends React.Component {
 
-    constructor() {
-        super()
-    }
-
     render() {
 
         return (
