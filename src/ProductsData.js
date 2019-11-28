@@ -1,133 +1,128 @@
 const productData = [
+
     {
         id: 1,
-        name: "Apple MacBook Pro 13in",
-        price: 1299,
+        productName: "Apple MacBook Pro 13in",
+        productDescription: "1.4GHz Quad-Core Processor with Turbo Boost up to 3.9GHz, 128GB Storage, Touch Bar and Touch ID",
+        productPrice: 1299,
         isNewProduct: false,
-        isCompared: false,
-        desc: "1.4GHz Quad-Core Processor with Turbo Boost up to 3.9GHz, 128GB Storage, Touch Bar and Touch ID",
-        colours: [
+        productColours: [
             {
-                id: 1,
-                colour: "Space Gray",
-                images: "images/mbp13-space-gray.jpg",
-                default: true
+                colour_id: 1,
+                colourName: "Space Gray",
+                colourImagePath: "images/mbp13-space-gray.jpg",
+                isProductDefault: true
             },
             {
-                id: 2,
-                colour: "Silver",
-                images: "images/mbp13-silver.jpg",
-                default: false
+                colour_id: 2,
+                colourName: "Silver",
+                colourImagePath: "images/mbp13-silver.jpg",
+                isProductDefault: false
             }
         ]
     },
     {
         id: 2,
-        name: "Apple MacBook Pro 13in",
-        price: 1499,
+        productName: "Apple MacBook Pro 13in",
+        productDescription: "1.4GHz Quad-Core Processor with Turbo Boost up to 3.9GHz, 256GB Storage, Touch Bar and Touch ID",
+        productPrice: 1499,
         isNewProduct: false,
-        isCompared: false,
-        desc: "1.4GHz Quad-Core Processor with Turbo Boost up to 3.9GHz, 256GB Storage, Touch Bar and Touch ID",
-        colours: [
+        productColours: [
             {
-                id: 1,
-                colour: "Space Gray",
-                images: "images/mbp13-space-gray.jpg",
-                default: true
+                colour_id: 1,
+                colourName: "Space Gray",
+                colourImagePath: "images/mbp13-space-gray.jpg",
+                isProductDefault: true
             },
             {
-                id: 2,
-                colour: "Silver",
-                images: "images/mbp13-silver.jpg",
-                default: false
+                colour_id: 2,
+                colourName: "Silver",
+                colourImagePath: "images/mbp13-silver.jpg",
+                isProductDefault: false
             }
         ]
     },
     {
         id: 3,
-        name: "Apple MacBook Pro 13in",
-        price: 1799,
+        productName: "Apple MacBook Pro 13in",
+        productDescription: "2.4GHz Quad-Core Processor with Turbo Boost up to 4.1GHz, 256GB Storage, Touch Bar and Touch ID",
+        productPrice: 1799,
         isNewProduct: false,
-        isCompared: false,
-        desc: "2.4GHz Quad-Core Processor with Turbo Boost up to 4.1GHz, 256GB Storage, Touch Bar and Touch ID",
-        colours: [
+        productColours: [
             {
-                id: 1,
-                colour: "Space Gray",
-                images: "images/mbp13-space-gray.jpg",
-                default: true
+                colour_id: 1,
+                colourName: "Space Gray",
+                colourImagePath: "images/mbp13-space-gray.jpg",
+                isProductDefault: true
             },
             {
-                id: 2,
-                colour: "Silver",
-                images: "images/mbp13-silver.jpg",
-                default: false
+                colour_id: 2,
+                colourName: "Silver",
+                colourImagePath: "images/mbp13-silver.jpg",
+                isProductDefault: false
             }
         ]
     },
     {
         id: 4,
-        name: "Apple MacBook Pro 13in",
-        price: 1999,
+        productName: "Apple MacBook Pro 13in",
+        productDescription: "2.4GHz Quad-Core Processor with Turbo Boost up to 4.1GHz, 512GB Storage, Touch Bar and Touch ID",
+        productPrice: 1999,
         isNewProduct: false,
-        isCompared: false,
-        desc: "2.4GHz Quad-Core Processor with Turbo Boost up to 4.1GHz, 512GB Storage, Touch Bar and Touch ID",
-        colours: [
+        productColours: [
             {
-                id: 1,
-                colour: "Space Gray",
-                images: "images/mbp13-space-gray.jpg",
-                default: true
+                colour_id: 1,
+                colourName: "Space Gray",
+                colourImagePath: "images/mbp13-space-gray.jpg",
+                isProductDefault: true
             },
             {
-                id: 2,
-                colour: "Silver",
-                images: "images/mbp13-silver.jpg",
-                default: false
+                colour_id: 2,
+                colourName: "Silver",
+                colourImagePath: "images/mbp13-silver.jpg",
+                isProductDefault: false
             }
         ]
     },
     {
         id: 5,
-        name: "Apple MacBook Pro 16in",
-        price: 2399,
+        productName: "Apple MacBook Pro 16in",
+        productDescription: "2.6GHz 6-Core Processor, 512GB Storage, AMD Radeon Pro 5300M",
+        productPrice: 2399,
         isNewProduct: true,
-        isCompared: false,
-        desc: "2.6GHz 6-Core Processor, 512GB Storage, AMD Radeon Pro 5300M",
-        colours: [
+        productColours: [
             {
-                id: 1,
-                colour: "Space Gray",
-                images: "images/mbp16-space-gray.jpg",
-                default: true
+                colour_id: 1,
+                colourName: "Space Gray",
+                colourImagePath: "images/mbp16-space-gray.jpg",
+                isProductDefault: true
             },
             {
-                id: 2,
-                colour: "Silver",
-                images: "images/mbp16-silver.jpg",
-                default: false
+                colour_id: 2,
+                colourName: "Silver",
+                colourImagePath: "images/mbp16-silver.jpg",
+                isProductDefault: false
             }
         ]
     },
     {
         id: 6,
-        name: "Apple MacBook Pro 16in",
-        price: 2799,
+        productName: "Apple MacBook Pro 16in",
+        productDescription: "2.3GHz 8-Core Processor, 1TB Storage, AMD Radeon Pro 5500M",
+        productPrice: 2799,
         isNewProduct: true,
-        isCompared: false,
-        desc: "2.3GHz 8-Core Processor, 1TB Storage, AMD Radeon Pro 5500M",
-        colours: [
+        productColours: [
             {
-                id: 1,
-                colour: "Space Gray",
-                images: "images/mbp16-space-gray.jpg",
-                default: true
+                colour_id: 1,
+                colourName: "Space Gray",
+                colourImagePath: "images/mbp16-space-gray.jpg",
+                isProductDefault: true
             },
             {
-                id: 2,
-                colour: "Silver",
-                images: "images/mbp16-silver.jpg",
-                default: false
+                colour_id: 2,
+                colourName: "Silver",
+                colourImagePath: "images/mbp16-silver.jpg",
+                isProductDefault: false
             }
         ]
     }

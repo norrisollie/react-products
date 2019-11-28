@@ -1,6 +1,7 @@
 import React from "react"
 import Product from "./Product"
 import productsData from "../ProductsData"
+import ComparedProducts from "./ComparedProducts"
 
 class Main extends React.Component {
 
@@ -9,27 +10,24 @@ class Main extends React.Component {
 
         this.state = {
             products: productsData,
-            comparedProducts: []
+            numberCompared: 0
         }
     }
 
     handleCompareChange = (e) => {
+        e.persist()
 
         const productID = parseInt(e.target.dataset.productId)
 
         this.setState(prevState => {
-
-            const comparedProducts = prevState.products.map(product => {
-                // console.log(product)
-                if (product.id === productID) {
-                    // console.log(product.id, productID)
-                    product.isCompared = true
-                    console.log(product.isCompared)
+            prevState.products.map((updatedComparedProduct) => {
+                if (updatedComparedProduct.id === productID) {
+                    updatedComparedProduct.compared.map((updated) => {
+                        updated.isProductCompared = !updated.isProductCompared
+                    })
                 }
-                // return product.isCompared
             })
-
-            return comparedProducts.isCompared
+            return prevState
         })
     }
 
@@ -41,20 +39,17 @@ class Main extends React.Component {
 
         this.setState(prevState => {
 
-            const updatedProducts = prevState.products.map(updatedProduct => {
+            prevState.products.map((updatedProduct) => {
                 if (updatedProduct.id === productID) {
-                    const colours = updatedProduct.colours.map(updatedColour => {
-                        updatedColour.default = false;
-                        if (updatedColour.id === colourID) {
-                            updatedColour.default = true
+                    updatedProduct.colours.map((colour) => {
+                        colour.default = false
+                        if (colour.id === colourID) {
+                            colour.default = true
                         }
-                        return updatedColour
                     })
-                    return updatedProduct.colours = colours
                 }
-                return updatedProduct.colours
             })
-            return updatedProducts
+            return prevState
         })
     }
 
@@ -68,6 +63,7 @@ class Main extends React.Component {
 
         return (
             <div className="main" >
+                <ComparedProducts numberCompared={this.state.numberCompared} />
                 {productComponents}
             </div>
         )
