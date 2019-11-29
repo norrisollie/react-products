@@ -96,8 +96,8 @@
 }
 
 .product-image {
-  max-width: 226px;
   display: none;
+  max-width: 226px;
   margin-bottom: 10px;
 }
 
