@@ -2,8 +2,10 @@
   "name": "react-login",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://norrisollie.github.io/react-products",
   "dependencies": {
     "dart-sass": "^1.25.0",
+    "gh-pages": "^6.1.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.2.0",
@@ -15,10 +17,12 @@
   },
   "engineStrict": true,
   "scripts": {
-    "start": "source ~/.nvm/nvm.sh && nvm use && react-scripts start",
-    "build": "source ~/.nvm/nvm.sh && nvm use && react-scripts build",
-    "test": "source ~/.nvm/nvm.sh && nvm use && react-scripts test",
-    "eject": "source ~/.nvm/nvm.sh && nvm use && react-scripts eject"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
