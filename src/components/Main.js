@@ -1,7 +1,7 @@
 import React from "react";
 import Product from "./Product";
 import productsData from "../ProductsData";
-import ComparedProducts from "./ComparedProducts";
+// import ComparedProducts from "./ComparedProducts";
 
 class Main extends React.Component {
   constructor() {
@@ -13,22 +13,22 @@ class Main extends React.Component {
     };
   }
 
-  handleCompareChange = (e) => {
-    e.persist();
+  // handleCompareChange = (e) => {
+  //   e.persist();
 
-    const clickedProductID = parseInt(e.target.dataset.productID);
+  //   const clickedProductID = parseInt(e.target.dataset.productID);
 
-    this.setState((prevState) => {
-      prevState.products.map((updatedComparedProduct) => {
-        if (updatedComparedProduct.id === clickedProductID) {
-          updatedComparedProduct.compared.map((updated) => {
-            updated.isProductCompared = !updated.isProductCompared;
-          });
-        }
-      });
-      return prevState;
-    });
-  };
+  //   this.setState((prevState) => {
+  //     prevState.products.map((updatedComparedProduct) => {
+  //       if (updatedComparedProduct.id === clickedProductID) {
+  //         updatedComparedProduct.compared.map((updated) => {
+  //           updated.isProductCompared = !updated.isProductCompared;
+  //         });
+  //       }
+  //     });
+  //     return prevState;
+  //   });
+  // };
 
   handleColourClick = (e) => {
     e.persist();

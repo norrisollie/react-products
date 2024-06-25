@@ -8,7 +8,7 @@ class Product extends React.Component {
       productDescription,
       isNewProduct,
       handleColourClick,
-      handleCompareChange,
+      // handleCompareChange,
       productColours,
     } = this.props;
 
