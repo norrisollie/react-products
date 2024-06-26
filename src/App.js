@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.scss";
+import "flashgrid/dist/flashgrid.scss";
 
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -24,11 +25,11 @@ class App extends React.Component {
     };
 
     return (
-      <div>
+      <>
         <Header isLoggedIn={this.state.isLoggedIn} handleLogin={handleLogin} />
         <Main />
         <Footer />
-      </div>
+      </>
     );
   }
 }

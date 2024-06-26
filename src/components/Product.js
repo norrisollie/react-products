@@ -8,7 +8,7 @@ class Product extends React.Component {
       productDescription,
       isNewProduct,
       handleColourClick,
-      // handleCompareChange,
+      handleCompareChange,
       productColours,
     } = this.props;
 
@@ -46,7 +46,7 @@ class Product extends React.Component {
     });
 
     return (
-      <div className="product__wrapper">
+      <div className="product__wrapper col-12 col-6@sm col-4@md ">
         {isNewProduct && <div className="product__new">NEW</div>}
         <div className="product__title">{productName}</div>
         <div className="product__images">{images}</div>
@@ -58,7 +58,7 @@ class Product extends React.Component {
             currency: "GBP",
           })}
         </div>
-        {/* <div className="checkbox__wrapper">
+        <div className="checkbox__wrapper">
           <label className="label__wrapper">
             <input
               onChange={(e) => {
@@ -69,7 +69,7 @@ class Product extends React.Component {
             />
             Compare Item
           </label>
-        </div> */}
+        </div>
       </div>
     );
   }

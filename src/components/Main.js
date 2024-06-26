@@ -1,34 +1,47 @@
 import React from "react";
 import Product from "./Product";
-import productsData from "../ProductsData";
-// import ComparedProducts from "./ComparedProducts";
+import ComparedProducts from "./ComparedProducts";
+import ComparedProduct from "./ComparedProduct";
 
 class Main extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      products: productsData,
+      products: [],
+      isLoading: true,
       numberCompared: 0,
     };
   }
 
-  // handleCompareChange = (e) => {
-  //   e.persist();
+  handleCompareChange = (e) => {
+    e.persist();
 
-  //   const clickedProductID = parseInt(e.target.dataset.productID);
+    const clickedProductID = parseInt(e.target.dataset.productId);
 
-  //   this.setState((prevState) => {
-  //     prevState.products.map((updatedComparedProduct) => {
-  //       if (updatedComparedProduct.id === clickedProductID) {
-  //         updatedComparedProduct.compared.map((updated) => {
-  //           updated.isProductCompared = !updated.isProductCompared;
-  //         });
-  //       }
-  //     });
-  //     return prevState;
-  //   });
-  // };
+    this.setState((prevState) => {
+      const newProductData = prevState.products.map((product) => {
+        if (product.id === clickedProductID) {
+          return {
+            ...product,
+            isProductCompared: e.target.checked,
+          };
+        }
+        return product;
+      });
+
+      return { ...prevState, products: newProductData };
+    });
+  };
+
+  componentDidMount() {
+    fetch("products.json")
+      .then((response) => response.json())
+      .then((products) => {
+        this.setState({ products: [...products], isLoading: false });
+      })
+      .catch((error) => console.error("Error:", error));
+  }
 
   handleColourClick = (e) => {
     e.persist();
@@ -50,11 +63,10 @@ class Main extends React.Component {
             productColours: newColourData,
           };
         }
-
         return product;
       });
 
-      return { products: newProductData };
+      return { ...prevState, products: newProductData };
     });
   };
 
@@ -63,7 +75,6 @@ class Main extends React.Component {
       return (
         <Product
           key={productData.id}
-          products={this.state.products}
           handleColourClick={this.handleColourClick}
           handleCompareChange={this.handleCompareChange}
           {...productData}
@@ -71,10 +82,23 @@ class Main extends React.Component {
       );
     });
 
+    const productsToCompare = this.state.products.filter(
+      (productData) => productData.isProductCompared
+    );
+
+    const comparedProducts = productsToCompare.map((productData) => {
+      return <ComparedProduct {...productData} />;
+    });
+
     return (
       <div className="main">
-        {/* <ComparedProducts numberCompared={this.state.numberCompared} /> */}
-        {productComponents}
+        <div className="main__product-container grid grid-gap-lg">
+          <ComparedProducts numberCompared={this.state.numberCompared} />
+          {this.state.products.length !== 0 && !this.state.isLoading
+            ? productComponents
+            : "Products loading..."}
+        </div>
+        <div className="main__compared-container">{comparedProducts}</div>
       </div>
     );
   }
